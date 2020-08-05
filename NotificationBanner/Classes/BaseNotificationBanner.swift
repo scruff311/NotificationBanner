@@ -121,6 +121,9 @@ open class BaseNotificationBanner: UIView {
     /// Wether or not the notification banner is currently being displayed
     public var isDisplaying: Bool = false
 
+    /// The offset distance of the customView form the left and right edges of the screen
+    public var customViewEdgeOffset: CGFloat = 0.0
+
     /// The view that the notification layout is presented on. The constraints/frame of this should not be changed
     internal var contentView: UIView!
 
@@ -502,6 +505,7 @@ open class BaseNotificationBanner: UIView {
         UIView.animate(withDuration: forced ? animationDuration / 2 : animationDuration,
                        animations: {
                         self.frame = self.bannerPositionFrame.startFrame
+                        self.alpha = 0
         }) { (completed) in
 
             self.removeFromSuperview()

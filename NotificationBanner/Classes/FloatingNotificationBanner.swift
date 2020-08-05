@@ -64,7 +64,7 @@ open class FloatingNotificationBanner: GrowingNotificationBanner {
         }
     }
     
-    public init(customView: UIView) {
+    public init(customView: UIView, edgeOffset: CGFloat? = nil) {
         super.init(style: .customView)
         self.customView = customView
         
@@ -74,6 +74,10 @@ open class FloatingNotificationBanner: GrowingNotificationBanner {
         }
         
         spacerView.backgroundColor = customView.backgroundColor
+
+        if let edgeOffset = edgeOffset {
+            customViewEdgeOffset = edgeOffset
+        }
     }
     
     /**
