@@ -302,6 +302,7 @@ open class BaseNotificationBanner: UIView {
             bannerPosition: bannerPosition,
             bannerWidth: window.width,
             bannerHeight: bannerHeight,
+            windowWidth: window.width,
             maxY: maximumYPosition(),
             finishYOffset: finishBannerYOffset(),
             edgeInsets: bannerEdgeInsets
@@ -532,6 +533,7 @@ open class BaseNotificationBanner: UIView {
             bannerPosition: bannerPosition,
             bannerWidth: window.width,
             bannerHeight: bannerHeight,
+            windowWidth: window.width,
             maxY: maximumYPosition(),
             finishYOffset: finishBannerYOffset(),
             edgeInsets: bannerEdgeInsets
